@@ -1,0 +1,64 @@
+.Card {
+  &-header {
+    position: relative;
+    padding: 0 0 2rem 0;
+    border-bottom: 1px solid $alto;
+    column-gap: 1.2rem;
+
+    &::before {
+      position: absolute;
+      height: 2px;
+      width: 19rem;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: $black;
+    }
+
+    &-icon {
+      flex: 0 0 2rem;
+      max-width: 2rem;
+      height: 2rem;
+      width: 2rem;
+      @include centerOriginImage;
+    }
+
+    &-slash {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: $black;
+      line-height: 2.2rem;
+    }
+
+    &-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: $black;
+      line-height: 2.2rem;
+      text-transform: uppercase;
+      @include ellipsis(1);
+    }
+
+    &-see-more {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      color: $alizarin-crimson;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    &-buttons {
+      margin: 0 0 -2rem auto;
+    }
+  }
+
+  &.no-padding {
+    .Card-body {
+      padding: 0;
+    }
+  }
+
+  &-body {
+    padding: 2rem 0;
+  }
+}

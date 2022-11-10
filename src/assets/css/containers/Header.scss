@@ -1,0 +1,79 @@
+.Header {
+  background: url('../images/bg-header.png');
+  background-size: cover;
+  background-position: center;
+
+  &-wrapper {
+    column-gap: 2.8rem;
+    padding: 7.5rem 0;
+
+    @media (max-width: 991px) {
+      padding: 4rem 0;
+      column-gap: 2rem;
+    }
+  }
+
+  &-logo {
+    width: 16.4rem;
+    height: 16.4rem;
+
+    @media (max-width: 991px) {
+      width: 12rem;
+      height: 12rem;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-subtitle,
+  &-title {
+    font-size: 4.2rem;
+    color: $white;
+
+    @media (max-width: 991px) {
+      font-size: 3.6rem;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &-subtitle {
+    font-weight: 500;
+    line-height: 5rem;
+    margin-bottom: 0.4rem;
+
+    @media (max-width: 575px) {
+      line-height: 3rem;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+  }
+
+  &-btn-menu {
+    padding: 0.8rem;
+    background: $white;
+    margin-left: auto;
+    border-radius: .4rem;
+    flex: 0 0 5rem;
+    max-width: 5rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 991px) {
+      display: flex;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

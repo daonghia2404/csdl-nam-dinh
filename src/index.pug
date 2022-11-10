@@ -1,0 +1,179 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .HomePage 
+    .container
+      .HomePage-wrapper.flex.flex-wrap.items-start
+        .HomePage-wrapper-item
+          .HomePage-card
+            +Card({ title: 'Cơ sở dữ liệu nổi bật ngành công thương' })
+              .HomePage-row
+                .HomePage-col
+                  +Post({ title: 'Công bố quyết định thành lập Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao', description: 'Sáng 1-11, tại Công an tỉnh đã diễn ra Lễ công bố Quyết định thành lập Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao trực thuộc Công an tỉnh. Các đồng chí: Phạm Đình Nghị, Phó Bí thư Tỉnh ủy, ', tag: 'Dữ liệu trung tâm thương mại', date: '20/10/2022' })
+                  +Post({ title: 'Công bố quyết định thành lập Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao', description: 'Sáng 1-11, tại Công an tỉnh đã diễn ra Lễ công bố Quyết định thành lập Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao trực thuộc Công an tỉnh. Các đồng chí: Phạm Đình Nghị, Phó Bí thư Tỉnh ủy, ', tag: 'Dữ liệu cụm công nghiệp', date: '20/10/2022' })
+                  +Post({ title: 'Công bố quyết định thành lập Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao', description: 'Sáng 1-11, tại Công an tỉnh đã diễn ra Lễ công bố Quyết định thành lập Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao trực thuộc Công an tỉnh. Các đồng chí: Phạm Đình Nghị, Phó Bí thư Tỉnh ủy, ', tag: 'Dữ liệu hợp tác xã', date: '20/10/2022' })
+
+                .HomePage-col
+                  .overflow-auto(style="max-height: 50rem;")
+                    each item in [1,2]
+                      +Post({ title: 'Bế mạc diễn tập khu vực phòng thủ và bảo đảm tác chiến phòng thủ năm 2022', tag: 'Dữ liệu siêu thị', date: '20/10/2022', size: 'small' })
+                      +Post({ title: 'Tổng sản phẩm GRDP của tỉnh ước tăng 9,0%, cao nhất trong những năm gần đây', tag: 'Dữ liệu Hội, Hiệp hội', date: '20/10/2022', size: 'small' })
+                      +Post({ title: 'Xã Nam Thanh đón nhận danh hiệu xã đạt chuẩn nông thôn mới nâng cao', tag: 'Dữ liệu cụm công nghiệp ', date: '20/10/2022', size: 'small' })
+                      +Post({ title: 'Hội nghị liên tịch thống nhất nội dung kỳ họp thường lệ cuối năm 2022, HĐND tỉnh khóa XIX', tag: 'Dữ liệu trung tâm thương mại', date: '20/10/2022', size: 'small' })
+
+          .HomePage-card.dark
+            .HomePage-row
+              .HomePage-col
+                +Card({ title: 'Dữ liệu khu công nghiệp mới' })
+                  +Table({})
+                    thead 
+                      tr 
+                        th.text-center STT
+                        th Tên đơn vị
+                        th Địa chỉ
+
+                    tbody 
+                      each item in [1,2,3,4,5,6]
+                        tr 
+                          td.text-center= item 
+                          td KCN dệt may Rạng Đông
+                          td Thị trấn Rạng Đông
+
+              .HomePage-col
+                +Card({ title: 'DL khu cụm công nghiệp mới' })
+                  +Table({})
+                    thead 
+                      tr 
+                        th.text-center STT
+                        th Tên đơn vị
+                        th Địa chỉ
+
+                    tbody 
+                      each item in [1,2,3,4,5,6]
+                        tr 
+                          td.text-center= item 
+                          td Xuân Kiên
+                          td Nam Định
+          
+          .HomePage-card
+            .HomePage-row.half
+              .HomePage-col
+                +Banner({ image: './assets/images/image-banner-5.png', caption: 'Cuộc thi an toàn giao thông' })
+              .HomePage-col
+                +Banner({ image: './assets/images/image-banner-6.png', caption: 'Nông thôn mới' })
+
+          .HomePage-card
+            .HomePage-row
+              .HomePage-col
+                +Card({ title: 'Dữ liệu làng nghề truyền thống mới' })
+                  +Table({})
+                    thead 
+                      tr 
+                        th.text-center STT
+                        th Tên làng nghề
+                        th Địa chỉ
+
+                    tbody 
+                      each item in [1,2,3,4,5,6,7,8]
+                        tr 
+                          td.text-center= item 
+                          td Làng nghề đúc đồng Tống Xá
+                          td huyện Ý Yên
+              .HomePage-col
+                +Card({ title: 'an toàn thực phẩm' })
+                  .overflow-auto(style="max-height: 40rem;")
+                    each item in [1,2]
+                      +Post({ title: 'Bế mạc diễn tập khu vực phòng thủ và bảo đảm tác chiến phòng thủ năm 2022', tag: 'Dữ liệu siêu thị', date: '20/10/2022', size: 'small' })
+                      +Post({ title: 'Tổng sản phẩm GRDP của tỉnh ước tăng 9,0%, cao nhất trong những năm gần đây', tag: 'Dữ liệu Hội, Hiệp hội', date: '20/10/2022', size: 'small' })
+                      +Post({ title: 'Xã Nam Thanh đón nhận danh hiệu xã đạt chuẩn nông thôn mới nâng cao', tag: 'Dữ liệu cụm công nghiệp ', date: '20/10/2022', size: 'small' })
+                      +Post({ title: 'Hội nghị liên tịch thống nhất nội dung kỳ họp thường lệ cuối năm 2022, HĐND tỉnh khóa XIX', tag: 'Dữ liệu trung tâm thương mại', date: '20/10/2022', size: 'small' })
+
+          .HomePage-card
+            +Card({ title: 'Dữ liệu thương mại điện tử mới' })
+              +Table({})
+                thead 
+                  tr 
+                    th(rowspan="2") STT
+                    th(rowspan="2") Chỉ tiêu
+                    th(rowspan="2").text-center Tổng số
+                    th(colspan="4").text-center.border-white Chia theo khu vực kinh tế
+                  tr
+                    th.text-center.border-white.long-content Nhà nước
+                    th.text-center.border-white.long-content Ngoài nhà nước
+                    th.text-center.border-white.long-content có vốn đầu tư trực tiếp nước ngoài
+                    th.text-center.border-white.long-content Khu vực khác
+                tbody 
+                  tr 
+                    td A
+                    td B 
+                    td.text-center 1+2+3+4+5
+                    td.text-center 2
+                    td.text-center 3
+                    td.text-center 4
+                    td.text-center 5
+                  each item in [1,2,3,4]
+                    tr 
+                      td= item
+                      td.long-content Nông nghiệp, lâm nghiệp và thủy sản 
+                      td.text-center 94
+                      td.text-center 188
+                      td.text-center 24
+                      td.text-center 25
+                      td.text-center 85
+
+          .HomePage-card.dark
+            +Card({ title: 'Dữ liệu về cấp phép mới nhất' })
+              +Table({})
+                thead 
+                  tr 
+                    th.text-center STT
+                    th Tên doanh nghiệp
+                    th Địa chỉ
+                    th.text-center Số giấy phép
+                    th.text-center ngày hết hạn
+                    th.text-center TT khác
+                tbody 
+                  each item in [1,2,3,4,5,6,7,8]
+                    tr 
+                      td.text-center= item
+                      td.long-content HKD Tâm Khang
+                      td.long-content ấp Bến Cộ, xã Phú Đông
+                      td.text-center Số giấy phép
+                      td.text-center ngày hết hạn
+                      td.text-center TT khác
+
+          .HomePage-card
+            +Card({ title: 'Văn bản pháp luật' })
+              +Table({})
+                thead 
+                  tr 
+                    th.text-center STT
+                    th Tên văn bản
+                    th Số hiệu
+                    th.text-center ngày ban hành
+                    th.text-center File đính kèm
+                tbody 
+                  each item in [1,2,3,4,5,6,7,8]
+                    tr 
+                      td.text-center= item
+                      td.long-content Công văn về việc điều hành kinh doanh xăng dầu
+                      td 3011/BCT-TTTN
+                      td.text-center 21/10/2022
+                      td.text-center
+                        .flex.justify-center.cursor-pointer 
+                          img(src="./assets/icons/icon-cloud-download.svg", alt="")
+          
+
+        .HomePage-wrapper-item
+          +Banner({ image: './assets/images/image-banner-1.png', text: 'Bản đồ hành chính tỉnh' })
+          +Banner({ image: './assets/images/image-banner-2.png', text: 'Đăng ký doanh nghiệp trực tuyến' })
+          +Banner({ image: './assets/images/image-banner-3.png', text: 'Tra cứu hồ sơ\nĐăng ký kinh doanh' })
+          +Banner({ image: './assets/images/image-banner-4.png', text: 'cơ sở dữ liệu văn bản quốc gia' })
+          +Banner({ text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+          +Banner({ text: 'Công báo tỉnh Nam Định' })
+          +Banner({ text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+          +Banner({ text: 'Công báo tỉnh Nam Định' })
+          +Banner({ text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+          +Banner({ text: 'Công báo tỉnh Nam Định' })
+
+          include includes/containers/StatisticalAccess.pug

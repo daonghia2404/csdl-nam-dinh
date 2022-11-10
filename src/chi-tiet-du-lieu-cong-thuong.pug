@@ -1,0 +1,55 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .CategoryPage 
+    .container
+      .CategoryPage-wrapper.flex.items-start
+        .CategoryPage-wrapper-item
+          +Card({ title: 'Dữ liệu ngành công thương', seeMore: false, noPadding: true })
+            .CategoryPage-lists
+              each item in dataCategory1
+                a(href=item.link).CategoryPage-lists-item.flex.items-center
+                  img(src="./assets/icons/icon-ruby.svg" alt="")
+                  span= item.title
+
+          +Card({ title: 'Dữ liệu cấp phép', seeMore: false, noPadding: true })
+            .CategoryPage-lists
+              each item in dataCategory2
+                a(href=item.link).CategoryPage-lists-item.flex.items-center
+                  img(src="./assets/icons/icon-ruby.svg" alt="")
+                  span= item.title
+
+          +Banner({ image: './assets/images/image-banner-1.png', text: 'Bản đồ hành chính tỉnh' })
+          +Banner({ image: './assets/images/image-banner-2.png', text: 'Đăng ký doanh nghiệp trực tuyến' })
+          +Banner({ image: './assets/images/image-banner-7.png', text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+          +Banner({ image: './assets/images/image-banner-8.png', text: 'Công báo tỉnh Nam Định' })
+
+          .CategoryPage-card
+            include includes/containers/StatisticalAccess.pug
+
+        .CategoryPage-wrapper-item
+          +Card({ title: 'Dữ liệu công thương', icon: 'home', seeMore: false })
+            .CategoryPage-title CSDL Thống kê ngành Công Thương
+
+            +Table({})
+              tbody 
+                tr 
+                  td.nowrap Tên đơn vị
+                  td.long-content Địa điểm kinh doanh – Công ty cổ phần Gas Tấn Tài – Cửa hàng Gas 4.0 ĐN Số 03KCN dệt may Rạng Đông
+                tr 
+                  td.nowrap Địa bàn
+                  td.long-content TP. Nam định
+                tr 
+                  td.nowrap Địa chỉ
+                  td.long-content 353, đường Phạm Văn Thuận, phường Tam Hiệp, thành phố Biên Hòa, tỉnh Đồng Nai
+                tr 
+                  td.nowrap Lĩnh vực đầu tư
+                  td.long-content Bất động sản
+                tr 
+                  td.nowrap Địa chỉ
+                  td.long-content= `Diện tích quy hoạch: 207,45 ha\nVị trí:  Nằm sát đường tỉnh lộ 295, gần Sồng Cầu. Cách thành phố Bắc Giang 35 km, cách thủ đô Hà Nội 45 km, cách sân bay quốc tế Nội Bài 30 km, cách cảng Hải Phòng 120 km, cách cửa khẩu Hữu Nghị Quan 130 km.\n- Hạ tầng kỹ thuật: Khu công nghiệp sẽ được đầu tư đồng bộ, hiện đại, văn minh, trong đó bao gồm các hạng mục chính như: Đường giao thông, hệ thống cấp điện, các nhà máy sản xuất, nhà kho, bến cảng, thông tin, trung tâm điều hành, Trạm cung cấp nước sạch 7.500 m3/ngày đêm, Trạm xử lý thải tập trung 6.000 m3/ngày đêm.\nChủ đầu tư: Công ty TNHH Hòa Phú Invest.\n.- Địa chỉ: Lô HC, Khu công nghiệp Hòa Phú, xã Mai Đình, huyện Hiệp Hòa, tỉnh Bắc Giang\n- Điện thoại: 0204.3586.868.\n- Fax: 024.33718.418.\n- Email: phumy@phumygroup.com.vn\n- Web.www.phumygroup.com.vn\n`
+                tr 
+                  td.nowrap Bản đồ
+                  td
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29793.988211049866!2d105.8369637!3d21.022739599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSGFub2ksIEhvw6BuIEtp4bq_bSwgSGFub2k!5e0!3m2!1sen!2s!4v1668068894342!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                

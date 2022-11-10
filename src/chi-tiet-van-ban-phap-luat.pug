@@ -1,0 +1,78 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .CategoryPage 
+    .container
+      .CategoryPage-wrapper.flex.items-start
+        .CategoryPage-wrapper-item
+          +Card({ title: 'Dữ liệu ngành công thương', seeMore: false, noPadding: true })
+            .CategoryPage-lists
+              each item in dataCategory1
+                a(href=item.link).CategoryPage-lists-item.flex.items-center
+                  img(src="./assets/icons/icon-ruby.svg" alt="")
+                  span= item.title
+
+          +Card({ title: 'Dữ liệu cấp phép', seeMore: false, noPadding: true })
+            .CategoryPage-lists
+              each item in dataCategory2
+                a(href=item.link).CategoryPage-lists-item.flex.items-center
+                  img(src="./assets/icons/icon-ruby.svg" alt="")
+                  span= item.title
+
+          +Banner({ image: './assets/images/image-banner-1.png', text: 'Bản đồ hành chính tỉnh' })
+          +Banner({ image: './assets/images/image-banner-2.png', text: 'Đăng ký doanh nghiệp trực tuyến' })
+          +Banner({ image: './assets/images/image-banner-7.png', text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+          +Banner({ image: './assets/images/image-banner-8.png', text: 'Công báo tỉnh Nam Định' })
+
+          .CategoryPage-card
+            include includes/containers/StatisticalAccess.pug
+
+        .CategoryPage-wrapper-item
+          +Card({ title: 'Văn bản pháp luật', icon: 'home', seeMore: false })
+            .CategoryPage-title Văn bản pháp luật
+
+            .CategoryPage-filter.flex.flex-wrap
+              +Input({ placeholder: 'Từ khòa tìm kiếm' })
+              +Select({ placeholder: 'Loại văn bản', options: [{ value: 1, label: 'Văn bản 1' }, { value: 2, label: 'Văn bản 2' }] })
+              +Select({ placeholder: 'Cơ quan ban hành', options: [{ value: 1, label: 'Cơ quan ban hành 1' }, { value: 2, label: 'Cơ quan ban hành 2' }] })
+              +Button({ title: 'Tìm kiếm', className: 'primary' })
+
+            +Table({})
+              tbody 
+                tr 
+                  td.nowrap Số hiệu
+                  td.long-content 09/CT-BCT
+                tr 
+                  td.nowrap Trích yếu
+                  td.long-content Chỉ thị về việc thực hiện Chế độ báo cáo thống kê điện tử của Bộ Công Thương
+                tr 
+                  td.nowrap Cơ quan ban hành
+                  td.long-content Chính phủ
+                tr 
+                  td.nowrap Loại văn bản
+                  td.long-content Báo cáo
+                tr 
+                  td.nowrap Ngày ban hành
+                  td.long-content 08/05/2020
+                tr 
+                  td.nowrap Ngày hiệu lực
+                  td 01/06/2020
+                tr 
+                  td.nowrap Ngày ban hành
+                  td 08/05/2020
+                tr 
+                  td.nowrap Ngày hết hiệu lực
+                  td 01/06/2022
+                tr 
+                  td.nowrap Người ký
+                  td Bộ trưởng Trần Tuấn Anh
+                tr 
+                  td.nowrap File đính kèm
+                  td
+                    .flex.items-center.justify-between 
+                      |Tailieu.pdf
+
+                      .flex(style="column-gap: 1.5rem;")
+                        +Button({ title: 'Xem trước', className: 'outline-primary' })
+                        +Button({ title: 'Tải xuống', className: 'primary' })
+                

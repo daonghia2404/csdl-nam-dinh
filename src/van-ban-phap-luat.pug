@@ -1,0 +1,61 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .CategoryPage 
+    .container
+      .CategoryPage-wrapper.flex.items-start
+        .CategoryPage-wrapper-item
+          +Card({ title: 'Dữ liệu ngành công thương', seeMore: false, noPadding: true })
+            .CategoryPage-lists
+              each item in dataCategory1
+                a(href=item.link).CategoryPage-lists-item.flex.items-center
+                  img(src="./assets/icons/icon-ruby.svg", alt="")
+                  span= item.title
+
+          +Card({ title: 'Dữ liệu cấp phép', seeMore: false, noPadding: true })
+            .CategoryPage-lists
+              each item in dataCategory2
+                a(href=item.link).CategoryPage-lists-item.flex.items-center
+                  img(src="./assets/icons/icon-ruby.svg", alt="")
+                  span= item.title
+
+          +Banner({ image: './assets/images/image-banner-1.png', text: 'Bản đồ hành chính tỉnh' })
+          +Banner({ image: './assets/images/image-banner-2.png', text: 'Đăng ký doanh nghiệp trực tuyến' })
+          +Banner({ image: './assets/images/image-banner-7.png', text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+          +Banner({ image: './assets/images/image-banner-8.png', text: 'Công báo tỉnh Nam Định' })
+
+          .CategoryPage-card
+            include includes/containers/StatisticalAccess.pug
+              
+        .CategoryPage-wrapper-item
+          +Card({ title: 'Văn bản pháp luật', icon: 'home', seeMore: false })
+            .CategoryPage-title Văn bản pháp luật
+
+            .CategoryPage-filter.flex.flex-wrap
+              +Input({ placeholder: 'Từ khòa tìm kiếm' })
+              +Select({ placeholder: 'Loại văn bản', options: [{ value: 1, label: 'Văn bản 1' }, { value: 2, label: 'Văn bản 2' }] })
+              +Select({ placeholder: 'Chọn năm', options: [{ value: 1, label: 'Năm 1' }, { value: 2, label: 'Năm 2' }] })
+              +Button({ title: 'Tìm kiếm', className: 'primary' })
+
+            +Table({})
+              thead 
+                tr 
+                  th.text-center STT
+                  th.nowrap Số hiệu
+                  th.text-center Ngày ban hành
+                  th.text-center Cơ quan ban hành
+                  th.text-center.nowrap loại văn bản
+                  th.long-content Trích yếu
+              tbody 
+                each item in [1,2,3,4,5,6,7,8]
+                  tr 
+                    td.text-center= item
+                    td.nowrap
+                      a(href="chi-tiet-van-ban-phap-luat.html") 09/CT-BCT
+                    td.text-center 08/05/2020
+                    td.text-center Chính phủ
+                    td.text-center Báo cáo
+                    td.long-content Chỉ thị về việc thực hiện Chế độ báo cáo thống kê điện tử của Bộ Công Thương
+
+            +Pagination({ justify: 'justify-end' })
+            

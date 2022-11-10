@@ -1,0 +1,17 @@
+mixin Pagination({ justify = 'justify-start' })
+  .Pagination.flex(class=`${justify}`)
+    ul.Pagination-list.flex
+      li.Pagination-list-item 
+        a(href="#").Pagination-list-item-link.prev
+          <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.824401 5.34337C0.642335 5.15066 0.642335 4.84934 0.824402 4.65663L4.13655 1.1508C4.44719 0.822 5 1.04184 5 1.49417L5 8.50583C5 8.95816 4.44719 9.178 4.13655 8.8492L0.824401 5.34337Z" fill="white"/></svg>
+
+      each item in [1,2,3]
+        li.Pagination-list-item
+          a(href="#" class=`${item === 1 ? 'active' : ''}`).Pagination-list-item-link= item
+
+      li.Pagination-list-item-link.ellipsis ...
+
+      li.Pagination-list-item
+        a(href="#").Pagination-list-item-link.next
+          <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.1756 5.34337C4.35766 5.15066 4.35766 4.84934 4.1756 4.65663L0.86345 1.1508C0.552815 0.822 4.13429e-07 1.04184 3.93657e-07 1.49417L8.71681e-08 8.50583C6.7396e-08 8.95816 0.552815 9.178 0.86345 8.8492L4.1756 5.34337Z" fill="white"/></svg>
+

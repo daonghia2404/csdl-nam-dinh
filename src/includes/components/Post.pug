@@ -1,0 +1,14 @@
+mixin Post({ title, description, tag, date, size })
+  .Post(class=`${size || ''}`)
+    a(href="#").Post-title.flex.items-center
+      .Post-title-icon
+        img(src="./assets/icons/icon-ruby.svg", alt="")
+      = title
+
+    if (description)
+      p.Post-description= description
+
+    .Post-footer.flex.items-center.justify-between 
+      a(href="#").Post-tag= tag
+
+      p.Post-date.Post-description= date

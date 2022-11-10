@@ -1,0 +1,27 @@
+.Select {
+  position: relative;
+  background: $white;
+  border: 1px solid $alto;
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    outline: none;
+    height: 4.2rem;
+    padding: 0.4rem 2.8rem 0.4rem 1.6rem;
+    @include ellipsis(1);
+    font-size: 1.6rem;
+    color: $black;
+  }
+
+  &-arrow {
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.2rem;
+  }
+}

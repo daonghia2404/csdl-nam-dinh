@@ -1,0 +1,52 @@
+.Post {
+  &.small {
+    .Post {
+      &-title {
+        column-gap: .8rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2rem;
+      }
+
+      &-tag {
+        padding: .5rem 1.2rem;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    color: $black;
+    transition: $common-transition;
+    column-gap: 2.2rem;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      color: $boston-blue;
+    }
+  }
+
+  &-description {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $black;
+    margin-bottom: 1rem;
+
+    &.Post-date {
+      color: $alizarin-crimson;
+    }
+  }
+
+  &-tag {
+    padding: .8rem 2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    background: rgba(61, 139, 193, 0.2);
+    border-radius: 0px 0px 1rem 0px;
+    border-left: 2px solid $boston-blue;
+    color: $black;
+    display: block;
+  }
+}

@@ -1,0 +1,43 @@
+include ../common/Data.pug
+include ../common/Functions.pug
+
+include ../components/Table.pug
+include ../components/Card.pug
+include ../components/Banner.pug
+include ../components/Post.pug
+include ../components/Pagination.pug
+include ../components/Select.pug
+include ../components/Button.pug
+include ../components/Input.pug
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		title CSDL tỉnh Nam Định
+		block head
+
+		//- CSS
+		link(rel="stylesheet" type="text/css" href="./assets/css/main.css")
+
+		//- Favicon
+		link(rel="icon" type="image/png" href="./assets/images/logo.png")
+
+
+	body
+		include ../containers/Header.pug
+		include ../containers/Navigation.pug
+
+		block pages
+
+		include ../containers/Footer.pug
+
+		block script
+
+		//- Java Script
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		script(src="./assets/js/jquery.min.js")
+		script(src="./assets/js/owl.carousel.min.js")
+		script(src="./assets/js/main.js")

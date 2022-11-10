@@ -1,0 +1,26 @@
+.StatisticalAccess
+  .StatisticalAccess-title Thống kê truy cập
+  .StatisticalAccess-values.flex 
+    .StatisticalAccess-values-item 0
+    .StatisticalAccess-values-item 0
+    .StatisticalAccess-values-item 0
+    .StatisticalAccess-values-item 1
+    .StatisticalAccess-values-item 0
+    .StatisticalAccess-values-item 0
+
+  .StatisticalAccess-info
+    each item, index in [{ label: 'Hôm nay:', value: '10' }, { label: 'Tuần này:', value: '100' }, { label: 'Tháng này:', value: '100' }, { label: 'Tất cả:', value: '100' }]
+      .StatisticalAccess-info-wrapper.flex.items-center.justify-between
+        .StatisticalAccess-info-item.flex.items-center
+          .StatisticalAccess-info-item-icon 
+            if (index === 3)
+              img(src="./assets/icons/icon-app-circle.svg", alt="")
+
+            else
+              img(src="./assets/icons/icon-user-circle.svg", alt="")
+
+          = item.label
+
+        .StatisticalAccess-info-item.flex.items-center= item.value
+
+  .StatisticalAccess-footer 12 đang online

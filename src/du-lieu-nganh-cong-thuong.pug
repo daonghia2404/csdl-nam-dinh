@@ -1,0 +1,56 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .CategoryPage 
+    .container
+      .CategoryPage-wrapper.flex.items-start
+        .CategoryPage-wrapper-item
+          +Card({ title: 'Dữ liệu ngành công thương', seeMore: false, noPadding: true })
+            .CategoryPage-lists
+              each item in dataCategory1
+                a(href=item.link).CategoryPage-lists-item.flex.items-center
+                  img(src="./assets/icons/icon-ruby.svg", alt="")
+                  span= item.title
+
+          +Card({ title: 'Dữ liệu cấp phép', seeMore: false, noPadding: true })
+            .CategoryPage-lists
+              each item in dataCategory2
+                a(href=item.link).CategoryPage-lists-item.flex.items-center
+                  img(src="./assets/icons/icon-ruby.svg", alt="")
+                  span= item.title
+
+          +Banner({ image: './assets/images/image-banner-1.png', text: 'Bản đồ hành chính tỉnh' })
+          +Banner({ image: './assets/images/image-banner-2.png', text: 'Đăng ký doanh nghiệp trực tuyến' })
+          +Banner({ image: './assets/images/image-banner-7.png', text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+          +Banner({ image: './assets/images/image-banner-8.png', text: 'Công báo tỉnh Nam Định' })
+
+          .CategoryPage-card
+            include includes/containers/StatisticalAccess.pug
+              
+        .CategoryPage-wrapper-item
+          +Card({ title: 'Dữ liệu ngành công thương', icon: 'home', seeMore: false })
+            .CategoryPage-title Khu công nghiệp
+
+            .CategoryPage-filter.flex.flex-wrap
+              +Select({ placeholder: 'Chọn huyện', options: [{ value: 1, label: 'Huyện 1' }, { value: 2, label: 'Huyện 2' }] })
+              +Select({ placeholder: 'Chọn xã', options: [{ value: 1, label: 'Xã 1' }, { value: 2, label: 'Xã 2' }] })
+              +Select({ placeholder: 'Chọn năm', options: [{ value: 1, label: 'Năm 1' }, { value: 2, label: 'Năm 2' }] })
+              +Button({ title: 'Tìm kiếm', className: 'primary' })
+              +Button({ title: 'Xuất Excel', className: 'outline-primary' })
+
+            +Table({})
+              thead 
+                tr 
+                  th.text-center STT
+                  th Tên đơn vị
+                  th Địa chỉ
+              tbody 
+                each item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+                  tr 
+                    td.text-center= item
+                    td 
+                      a(href="chi-tiet-du-lieu-cong-thuong.html") KCN dệt may Rạng Đông
+                    td Huyện Mỹ Lộc và huyện Vụ Bản
+
+            +Pagination({ justify: 'justify-end' })
+            

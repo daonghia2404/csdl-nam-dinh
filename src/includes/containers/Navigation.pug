@@ -1,0 +1,36 @@
+.Navigation
+  .Navigation-overlay
+  .container 
+    .Navigation-wrapper
+      ul.Navigation-list.flex.items-center
+        each item in dataNavigation
+          li.Navigation-list-item 
+            a(href=item.link).Navigation-list-item-link.flex.items-center.justify-between
+              = item.title
+              if (item.subMenu)
+                .Navigation-list-item-link-arrow
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="6 9 12 15 18 9" /></svg>
+
+            if (item.subMenu)
+              .Navigation-subnavigation
+                .Navigation-subnavigation-wrapper.flex
+                  .Navigation-subnavigation-col
+                    .Navigation-subnavigation-item.header Quận/ huyện
+                    each item, index in ['Giao Thủy', 'Hải Hậu', 'Mỹ Lộc', 'Nam Trực', 'Nghĩa Hưng', 'Huyện Trực Ninh', 'Vụ Bản', 'Xuân Trường', 'Ý Yên', 'Thành phố Nam Định']
+                      .Navigation-subnavigation-item.flex.items-center(class=`${index === 0 ? 'active' : ''}`)
+                        .Navigation-subnavigation-item-icon 
+                          img(src="./assets/icons/icon-ruby.svg", alt="")
+                        = item
+                        .Navigation-subnavigation-item-sub
+                          .Navigation-subnavigation-item-sub-wrapper.flex.flex-wrap   
+                            each subItem in ['Giao Thủy', 'Hải Hậu', 'Mỹ Lộc', 'Nam Trực', 'Nghĩa Hưng', 'Huyện Trực Ninh', 'Vụ Bản', 'Xuân Trường', 'Ý Yên', 'Thành phố Nam Định']
+                              a(href="#").Navigation-subnavigation-item.flex.items-center 
+                                .Navigation-subnavigation-item-icon 
+                                  img(src="./assets/icons/icon-ruby.svg", alt="")
+                                = `${subItem}-${index + 1}`
+
+                  .Navigation-subnavigation-col
+                    .Navigation-subnavigation-item.header Phường xã
+
+              
+                

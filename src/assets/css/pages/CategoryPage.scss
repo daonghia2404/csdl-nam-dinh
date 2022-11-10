@@ -1,0 +1,97 @@
+.CategoryPage {
+  padding: 3.2rem 0;
+
+  &-card {
+    padding: .8rem;
+    background: $wild-sand;
+  }
+
+  &-wrapper {
+    column-gap: 4rem;
+    row-gap: 3.6rem;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap-reverse;
+    }
+
+    &-item {
+      &:first-child {
+        flex: 0 0 43rem;
+        max-width: 43rem;
+
+        .Card,
+        .Banner {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      &:last-child {
+        flex: 0 0 calc(100% - 43rem - 4rem);
+        max-width: calc(100% - 43rem - 4rem);
+      }
+
+      @media (max-width: 991px) {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+      }
+    }
+  }
+
+  &-lists {
+    &-item {
+      column-gap: .6rem;
+      font-size: 1.6rem;
+      color: $black;
+      padding: 1rem .8rem;
+      transition: $common-transition;
+
+      &:hover {
+        color: $boston-blue;
+      }
+
+      &:nth-child(even) {
+        background: $alabaster;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $alto;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+  }
+
+  &-filter {
+    padding: 1.2rem 1.6rem;
+    margin-bottom: 2.4rem;
+    background: $black-squeeze;
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+    &>* {
+      flex: 1;
+
+      @media (max-width: 991px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .Pagination {
+    margin-top: 1.6rem;
+  }
+
+  &-chart {
+    margin-bottom: 3.2rem;
+
+    canvas {
+      width: 100% !important;
+      height: 40rem;
+    }
+  }
+}

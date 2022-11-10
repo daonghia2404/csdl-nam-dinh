@@ -1,0 +1,31 @@
+.Button {
+  button {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 4.2rem;
+    font-size: 1.6rem;
+    padding: .4rem 1.6rem;
+    cursor: pointer;
+    transition: $common-transition;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.primary {
+    button {
+      background: $boston-blue;
+      color: $white;
+    }
+  }
+
+  &.outline-primary {
+    button {
+      background: $white;
+      color: $boston-blue;
+      border: 1px solid $boston-blue;
+    }
+  }
+}

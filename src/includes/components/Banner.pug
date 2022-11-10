@@ -1,0 +1,16 @@
+mixin Banner({ image, text, caption })
+  .Banner(class=`${!image && text ? 'linear-gradient' : ''}`)
+    if (image)
+      a(href="#").Banner-image 
+        img(src=image, alt="")
+
+        if (caption)
+          span.Banner-image-caption= caption
+
+    if (text)
+      a(href="#").Banner-info.flex.items-center 
+        if (!image && text)
+          span.Banner-info-icon 
+            img(src="./assets/icons/icon-ruby.svg", alt="")
+
+        span.Banner-info-text= text
