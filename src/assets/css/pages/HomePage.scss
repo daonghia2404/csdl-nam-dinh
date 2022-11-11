@@ -11,8 +11,6 @@
       &:last-child {
         flex: 0 0 30rem;
         max-width: 30rem;
-        padding: .6rem;
-        background: $wild-sand;
 
         .Banner {
           margin-bottom: 1.5rem;
@@ -42,13 +40,13 @@
 
   &-col {
     &:first-child {
-      flex: 0 0 calc(100% / 3 * 2 - 4rem);
-      max-width: calc(100% / 3 * 2 - 4rem);
+      flex: 0 0 calc(60% - 4rem);
+      max-width: calc(60% - 4rem);
     }
 
     &:last-child {
-      flex: 0 0 calc(100% / 3);
-      max-width: calc(100% / 3);
+      flex: 0 0 calc(40%);
+      max-width: calc(40%);
     }
 
     .Post {
@@ -65,9 +63,17 @@
 
   &-card {
     padding: 3.5rem .8rem;
+    margin: 0 -.8rem;
 
     &.dark {
       background: rgba($boston-blue, 0.05);
     }
+  }
+
+  &-sticky {
+    position: sticky;
+    top: .8rem;
+    padding: .6rem;
+    background: $wild-sand;
   }
 }

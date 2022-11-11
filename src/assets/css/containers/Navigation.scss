@@ -84,9 +84,9 @@
 
       &.active {
         .Navigation-list-item {
-          &-link {
-            font-weight: 700;
-          }
+          // &-link {
+          //   font-weight: 700;
+          // }
         }
 
         @media (max-width: 991px) {
@@ -103,7 +103,7 @@
         &:hover {
           .Navigation-list-item {
             &-link {
-              font-weight: 700;
+              // font-weight: 700;
             }
           }
 

@@ -6,7 +6,7 @@ block headerPages
 block pages
   .HomePage 
     .container
-      .HomePage-wrapper.flex.flex-wrap.items-start
+      .HomePage-wrapper.flex.flex-wrap
         .HomePage-wrapper-item
           .HomePage-card
             +Card({ title: 'Cơ sở dữ liệu nổi bật ngành công thương' })
@@ -168,15 +168,16 @@ block pages
           
 
         .HomePage-wrapper-item
-          +Banner({ image: './assets/images/image-banner-1.png', text: 'Bản đồ hành chính tỉnh' })
-          +Banner({ image: './assets/images/image-banner-2.png', text: 'Đăng ký doanh nghiệp trực tuyến' })
-          +Banner({ image: './assets/images/image-banner-3.png', text: 'Tra cứu hồ sơ\nĐăng ký kinh doanh' })
-          +Banner({ image: './assets/images/image-banner-4.png', text: 'cơ sở dữ liệu văn bản quốc gia' })
-          +Banner({ text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
-          +Banner({ text: 'Công báo tỉnh Nam Định' })
-          +Banner({ text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
-          +Banner({ text: 'Công báo tỉnh Nam Định' })
-          +Banner({ text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
-          +Banner({ text: 'Công báo tỉnh Nam Định' })
+          .HomePage-sticky
+            +Banner({ image: './assets/images/image-banner-1.png', text: 'Bản đồ hành chính tỉnh' })
+            +Banner({ image: './assets/images/image-banner-2.png', text: 'Đăng ký doanh nghiệp trực tuyến' })
+            +Banner({ image: './assets/images/image-banner-3.png', text: 'Tra cứu hồ sơ\nĐăng ký kinh doanh' })
+            +Banner({ image: './assets/images/image-banner-4.png', text: 'cơ sở dữ liệu văn bản quốc gia' })
+            +Banner({ text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+            +Banner({ text: 'Công báo tỉnh Nam Định' })
+            +Banner({ text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+            +Banner({ text: 'Công báo tỉnh Nam Định' })
+            +Banner({ text: 'Lấy ý kiến nhân dân về DT VBQPPL' })
+            +Banner({ text: 'Công báo tỉnh Nam Định' })
 
-          include includes/containers/StatisticalAccess.pug
+            include includes/containers/StatisticalAccess.pug

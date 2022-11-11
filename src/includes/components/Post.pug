@@ -1,6 +1,6 @@
 mixin Post({ title, description, tag, date, size })
   .Post(class=`${size || ''}`)
-    a(href="#").Post-title.flex.items-center
+    a(href="#").Post-title.flex.items-start
       .Post-title-icon
         img(src="./assets/icons/icon-ruby.svg", alt="")
       = title

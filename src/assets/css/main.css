@@ -491,7 +491,7 @@ ul {
   background: rgba(188, 188, 188, 0.2);
 }
 .overflow-auto::-webkit-scrollbar-thumb {
-  background: rgba(188, 188, 188, 0.2);
+  background: rgba(188, 188, 188, 0.4);
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -723,6 +723,10 @@ ul {
   transition: 0.3s ease;
   column-gap: 2.2rem;
   margin-bottom: 0.5rem;
+  text-align: justify;
+}
+.Post-title-icon {
+  margin-top: 0.2rem;
 }
 .Post-title:hover {
   color: #3D8BC1;
@@ -1003,9 +1007,6 @@ ul {
 .Navigation-list-item.active .Navigation-list-item-link-arrow svg, .Navigation-list-item:hover .Navigation-list-item-link-arrow svg {
   stroke: #fff;
 }
-.Navigation-list-item.active .Navigation-list-item-link {
-  font-weight: 700;
-}
 @media (max-width: 991px) {
   .Navigation-list-item.active .Navigation-subnavigation {
     opacity: 1;
@@ -1015,9 +1016,6 @@ ul {
   }
 }
 @media (min-width: 992px) {
-  .Navigation-list-item:hover .Navigation-list-item-link {
-    font-weight: 700;
-  }
   .Navigation-list-item:hover .Navigation-subnavigation {
     opacity: 1;
     pointer-events: unset;
@@ -1268,8 +1266,6 @@ ul {
 .HomePage-wrapper-item:last-child {
   flex: 0 0 30rem;
   max-width: 30rem;
-  padding: 0.6rem;
-  background: #F5F5F5;
 }
 .HomePage-wrapper-item:last-child .Banner {
   margin-bottom: 1.5rem;
@@ -1291,12 +1287,12 @@ ul {
   max-width: calc(50% - 2rem);
 }
 .HomePage-col:first-child {
-  flex: 0 0 calc(66.6666666667% - 4rem);
-  max-width: calc(66.6666666667% - 4rem);
+  flex: 0 0 calc(60% - 4rem);
+  max-width: calc(60% - 4rem);
 }
 .HomePage-col:last-child {
-  flex: 0 0 33.3333333333%;
-  max-width: 33.3333333333%;
+  flex: 0 0 40%;
+  max-width: 40%;
 }
 .HomePage-col .Post:not(:last-child) {
   margin-bottom: 2rem;
@@ -1309,9 +1305,16 @@ ul {
 }
 .HomePage-card {
   padding: 3.5rem 0.8rem;
+  margin: 0 -0.8rem;
 }
 .HomePage-card.dark {
   background: rgba(61, 139, 193, 0.05);
+}
+.HomePage-sticky {
+  position: sticky;
+  top: 0.8rem;
+  padding: 0.6rem;
+  background: #F5F5F5;
 }
 
 .CategoryPage {

@@ -23,6 +23,11 @@
     transition: $common-transition;
     column-gap: 2.2rem;
     margin-bottom: 0.5rem;
+    text-align: justify;
+
+    &-icon {
+      margin-top: .2rem;
+    }
 
     &:hover {
       color: $boston-blue;
