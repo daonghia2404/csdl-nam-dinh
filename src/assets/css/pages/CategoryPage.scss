@@ -16,8 +16,8 @@
 
     &-item {
       &:first-child {
-        flex: 0 0 43rem;
-        max-width: 43rem;
+        flex: 0 0 30rem;
+        max-width: 30rem;
 
         .Card,
         .Banner {
@@ -26,8 +26,8 @@
       }
 
       &:last-child {
-        flex: 0 0 calc(100% - 43rem - 4rem);
-        max-width: calc(100% - 43rem - 4rem);
+        flex: 0 0 calc(100% - 30rem - 4rem);
+        max-width: calc(100% - 30rem - 4rem);
       }
 
       @media (max-width: 991px) {
@@ -44,6 +44,10 @@
       color: $black;
       padding: 1rem .8rem;
       transition: $common-transition;
+
+      span {
+        @include ellipsis(1);
+      }
 
       &:hover {
         color: $boston-blue;
@@ -89,9 +93,19 @@
   &-chart {
     margin-bottom: 3.2rem;
 
-    canvas {
-      width: 100% !important;
-      height: 40rem;
+    // canvas {
+    //   width: 100% !important;
+    //   height: 40rem;
+    // }
+
+    .highcharts-figure,
+    .highcharts-data-table table {
+      min-width: 310px;
+      margin: 1em auto;
+    }
+
+    #myChart {
+      height: 400px;
     }
   }
 }

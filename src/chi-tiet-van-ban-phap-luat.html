@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSDL tỉnh Nam Định</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
-    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+    <link rel="icon" type="image/png" href="./assets/images/logo.png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header class="Header">
@@ -35,7 +35,7 @@
             </li>
             <li class="Navigation-list-item"> <a class="Navigation-list-item-link flex items-center justify-between" href="du-lieu-nganh-cong-thuong.html">Dữ liệu Sở Công Thương Nam Định</a>
             </li>
-            <li class="Navigation-list-item"> <a class="Navigation-list-item-link flex items-center justify-between" href="van-ban-phap-luat.html">Văn bản pháp luật</a>
+            <li class="Navigation-list-item active"> <a class="Navigation-list-item-link flex items-center justify-between" href="van-ban-phap-luat.html">Văn bản pháp luật</a>
             </li>
             <li class="Navigation-list-item"> <a class="Navigation-list-item-link flex items-center justify-between" href="#">Dữ liệu theo địa phương
                 <div class="Navigation-list-item-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="6 9 12 15 18 9" /></svg></div></a>
@@ -318,22 +318,18 @@
                     <input type="text" placeholder="Từ khòa tìm kiếm"/>
                   </div>
                   <div class="Select">
-                    <select>
+                    <select class="js-select2" data-options="{ &quot;placeholder&quot;: &quot;Loại văn bản&quot; }">
                       <option value="">Loại văn bản</option>
                       <option value="1">Văn bản 1</option>
                       <option value="2">Văn bản 2</option>
                     </select>
-                    <div class="Select-arrow">
-                       <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.84337 4.6756C4.65066 4.85766 4.34934 4.85766 4.15663 4.6756L0.650801 1.36345C0.322001 1.05281 0.541841 0.499999 0.994173 0.499999L8.00583 0.5C8.45816 0.5 8.678 1.05281 8.3492 1.36345L4.84337 4.6756Z" fill="black"/></svg></div>
                   </div>
                   <div class="Select">
-                    <select>
+                    <select class="js-select2" data-options="{ &quot;placeholder&quot;: &quot;Cơ quan ban hành&quot; }">
                       <option value="">Cơ quan ban hành</option>
                       <option value="1">Cơ quan ban hành 1</option>
                       <option value="2">Cơ quan ban hành 2</option>
                     </select>
-                    <div class="Select-arrow">
-                       <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.84337 4.6756C4.65066 4.85766 4.34934 4.85766 4.15663 4.6756L0.650801 1.36345C0.322001 1.05281 0.541841 0.499999 0.994173 0.499999L8.00583 0.5C8.45816 0.5 8.678 1.05281 8.3492 1.36345L4.84337 4.6756Z" fill="black"/></svg></div>
                   </div>
                   <div class="Button primary">
                     <button class="flex items-center justify-center" type="button"><span class="Button-control-title">Tìm kiếm</span>
@@ -415,9 +411,12 @@
           <p class="Footer-description">Hotline: 02283648409      |      Email: socongthuongnamdinh@gmail.com      |      Fax: 02283648409</p>
         </div>
       </div>
-    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/owl.carousel.min.js"></script>
+    </footer><script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
     .Navigation-wrapper
       ul.Navigation-list.flex.items-center
         each item in dataNavigation
-          li.Navigation-list-item 
+          li.Navigation-list-item(class=`${item.title === activeMenu ? 'active' : ''}`) 
             a(href=item.link).Navigation-list-item-link.flex.items-center.justify-between
               = item.title
               if (item.subMenu)

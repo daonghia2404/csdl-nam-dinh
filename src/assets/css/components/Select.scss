@@ -1,27 +1,45 @@
 .Select {
   position: relative;
-  background: $white;
-  border: 1px solid $alto;
 
-  select {
-    appearance: none;
-    -webkit-appearance: none;
-    border: none;
+  .select2-container {
+    width: 100% !important;
+  }
+
+  .select2-container--default .select2-selection--single {
+    background: $white;
+    border: 1px solid $alto;
     border-radius: 0;
-    width: 100%;
-    outline: none;
     height: 4.2rem;
-    padding: 0.4rem 2.8rem 0.4rem 1.6rem;
-    @include ellipsis(1);
+    padding: 0.4rem 0.8rem 0.4rem 1.6rem;
     font-size: 1.6rem;
     color: $black;
+    @include ellipsis(1);
   }
 
-  &-arrow {
-    position: absolute;
-    pointer-events: none;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 1.2rem;
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 2.6rem;
+    top: .8rem;
+    right: .8rem;
+    width: 2rem;
   }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+  }
+}
+
+.select2-results__option {
+  font-size: 1.6rem;
+  color: $black;
+  padding: 1rem !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $cerulean;
+  color: $white;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  font-size: 1.6rem;
+  outline: none;
 }

@@ -90,6 +90,7 @@ ul {
 
 .overflow-auto {
   overflow: auto;
+  @include styleScrollBar;
 }
 
 .cursor-pointer {

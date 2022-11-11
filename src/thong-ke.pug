@@ -1,5 +1,8 @@
 extends includes/layouts/Guest.pug
 
+block headerPages 
+  - const activeMenu = 'Thống kê';
+
 block pages
   .CategoryPage 
     .container
@@ -9,14 +12,14 @@ block pages
             .CategoryPage-lists
               each item in dataCategory1
                 a(href=item.link).CategoryPage-lists-item.flex.items-center
-                  img(src="./assets/icons/icon-ruby.svg", alt="")
+                  img(src="./assets/icons/icon-ruby.svg" alt="")
                   span= item.title
 
           +Card({ title: 'Dữ liệu cấp phép', seeMore: false, noPadding: true })
             .CategoryPage-lists
               each item in dataCategory2
                 a(href=item.link).CategoryPage-lists-item.flex.items-center
-                  img(src="./assets/icons/icon-ruby.svg", alt="")
+                  img(src="./assets/icons/icon-ruby.svg" alt="")
                   span= item.title
 
           +Banner({ image: './assets/images/image-banner-1.png', text: 'Bản đồ hành chính tỉnh' })
@@ -26,7 +29,7 @@ block pages
 
           .CategoryPage-card
             include includes/containers/StatisticalAccess.pug
-              
+
         .CategoryPage-wrapper-item
           +Card({ title: 'Thống kê dữ liệu / Khu công nghiệp', icon: 'home', seeMore: false })
             .CategoryPage-title Thống kê báo cáo
@@ -39,7 +42,8 @@ block pages
               +Button({ title: 'Xem báo cáo', className: 'primary' })
 
             .CategoryPage-chart 
-              <canvas id="myChart"></canvas>
+              figure.highcharts-figure
+                #myChart
 
             +Card({ title: 'Dữ liệu thương mại điện tử mới', seeMore: false, buttonTitle: 'Xuất excel' })
               +Table({})
@@ -72,4 +76,3 @@ block pages
                       td.text-center 24
                       td.text-center 25
                       td.text-center 85
-            

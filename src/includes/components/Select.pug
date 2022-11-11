@@ -1,12 +1,11 @@
 mixin Select({ options = [], placeholder })
   .Select
-    select
+    select.js-select2(data-options=`{ "placeholder": "${placeholder}" }`)
       if (placeholder)
         option(value="")= placeholder
-
       each item in options
         option(value=item.value)= item.label
 
-    .Select-arrow 
-      <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.84337 4.6756C4.65066 4.85766 4.34934 4.85766 4.15663 4.6756L0.650801 1.36345C0.322001 1.05281 0.541841 0.499999 0.994173 0.499999L8.00583 0.5C8.45816 0.5 8.678 1.05281 8.3492 1.36345L4.84337 4.6756Z" fill="black"/></svg>
+    //- .Select-arrow 
+    //-   <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.84337 4.6756C4.65066 4.85766 4.34934 4.85766 4.15663 4.6756L0.650801 1.36345C0.322001 1.05281 0.541841 0.499999 0.994173 0.499999L8.00583 0.5C8.45816 0.5 8.678 1.05281 8.3492 1.36345L4.84337 4.6756Z" fill="black"/></svg>
 

@@ -16,7 +16,7 @@
 
   &.primary {
     button {
-      background: $boston-blue;
+      background: $cerulean;
       color: $white;
     }
   }
@@ -24,8 +24,8 @@
   &.outline-primary {
     button {
       background: $white;
-      color: $boston-blue;
-      border: 1px solid $boston-blue;
+      color: $cerulean;
+      border: 1px solid $cerulean;
     }
   }
 }

@@ -1,5 +1,8 @@
 extends includes/layouts/Guest.pug
 
+block headerPages 
+  - const activeMenu = 'Văn bản pháp luật';
+
 block pages
   .CategoryPage 
     .container
@@ -42,8 +45,8 @@ block pages
                 tr 
                   th.text-center STT
                   th.nowrap Số hiệu
-                  th.text-center Ngày ban hành
-                  th.text-center Cơ quan ban hành
+                  th.text-center.nowrap Ngày ban hành
+                  th.text-center.long-content Cơ quan ban hành
                   th.text-center.nowrap loại văn bản
                   th.long-content Trích yếu
               tbody 
