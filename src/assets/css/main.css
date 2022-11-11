@@ -406,11 +406,6 @@ html {
     font-size: 8px;
   }
 }
-@media (max-width: 991px) {
-  html {
-    font-size: 7px;
-  }
-}
 
 .container {
   max-width: 140rem;
@@ -981,7 +976,7 @@ ul {
     height: 100%;
     top: 0;
     right: 0;
-    width: 45rem;
+    width: 36rem;
     overflow: auto;
     background: #fff;
     z-index: 2;
