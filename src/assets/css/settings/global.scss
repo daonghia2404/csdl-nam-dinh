@@ -89,6 +89,7 @@ ul {
 }
 
 .overflow-auto {
+  padding-right: .8rem;
   overflow: auto;
   @include styleScrollBar;
 }
