@@ -30,7 +30,7 @@ const navigation = {
         const subNav = item.querySelector(".Navigation-subnavigation");
         if (subNav) {
           e.preventDefault();
-          item.classList.toggle("active");
+          item.classList.toggle("visible");
         }
       })
     );
